@@ -20,7 +20,10 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.post('/users', 'UsersController.create');
+// Route.post('/users', 'UsersController.create');
 Route.get('/users', 'UsersController.listAll');
 Route.delete('/users/:id', 'UsersController.remove');
+
+Route.post('/login', 'AuthController.login')
+Route.post('/user', 'AuthController.store')
 
